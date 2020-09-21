@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, Initial-scale=">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<title>EMPLOYMENT GENERATED DURING THE FINANCIAL YEAR 2020-2021</title>
+<style>
+.header{
+padding:40px;
+width:100%;
+position:relative;
+background-image: url('mgnrega_banner.gif');
+background-repeat:no-repeat;
+margin-top:5px;
+
+}
+.footer{
+padding: 10px;
+width:100%;
+background-color:#9933cc;
+color:white;
+}
+#h3{
+font-family: Arial, Helvetica, sans-serif;
+color:darkblue;
+text-align:center;
+}
+.frmcnt{
+margin-top: 5px;
+margin-left: 100px;
+margin-right: 100px;
+}
+</style>
+</head>
+
+<div class="container" style="border: 2px solid green;background-image:url('mgn-759.jpg');background-repeat:x-repeat;">
+<div class="header">
+</div><br>
+<h3 id="h3"><b>PROGRESS REPORT-UPDATE</b></h3>
+
+<br>
+
+<div class="frmcnt">
+
+<form name="egdreg" method="post" action="https://localhost/sih/progrepupdate.php">
+
+<div class="row">
+<div class="col-md-3"><label><b>State</b></label></div>
+<div class="col-md-8">
+<select id="state" name="state">
+<option>Select</option>
+<option value="TAMILNADU">TAMILNADU</option>
+<option value="KERALA">KERALA</option>
+<option value="BANGALORE">BANGALORE</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3"><label><b>District</b></label></div>
+<div class="col-md-8">
+<select id="district" name="district" onchange="changeblock(this);">
+<option>Select</option>
+<option value="ARIYALUR">ARIYALUR</option>
+<option value="COIMPATORE">COIMBATORE</option>
+<option value="CUDDALORE">CUDDALORE</option>
+<option value="DHARMAPURI">DHARMAPURI</option>
+<option value="DINDIGUL">DINDIGUL</option>
+<option value="ERODE">ERODE</option>
+<option value="KANCHIPURAM">KANCHIPURAM</option>
+<option value="KANNIYAKUMARI">KANNIYAKUMARI</option>
+<option value="KARUR">KARUR</option>
+<option value="KRISHNAKIRI">KRISHNAGIRI</option>
+<option value="MADHURAI">MADURAI</option>
+<option value="NAGAPPATTINAM">NAGAPATTINAM</option>
+<option value="NAMAKKAL">NAMAKKAL</option>
+<option value="PERAMPALUR">PERAMBALUR</option>
+<option value="PUDHUKKOTTAI">PUDUKKOTTAI</option>
+<option value="RAMANATHAPURAM">RAMANATHAPURAM</option>
+<option value="SALEM">SALEM</option>
+<option value="SIVAGANGAI">SIVAGANGAI</option>
+<option value="THANJAVUR">THANJAVUR</option>
+<option value="THE NILGIRISH">THE NILGIRIS</option>
+<option value="THENI">THENI</option>
+<option value="THOOTHUKKUDI">THOOTHUKKUDI</option>
+<option value="TIRUCHIRAPPALLI">TIRUCHIRAPPALLI</option>
+<option value="TIRUNELVELI">TIRUNELVELI</option>
+<option value="TIRUPPUR">TIRUPPUR</option>
+<option value="TIRUVALLUR">TIRUVALLUR</option>
+<option value="TIRUVANNAMALAI">TIRUVANNAMALAI</option>
+<option value="TIRUVARUR">TIRUVARUR</option>
+<option value="VELLORE">VELLORE</option>
+<option value="VILLUPURAM">VILLUPURAM</option>
+<option value="VIRUDHUNAGAR">VIRUDHUNAGAR</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3"><label><b>Block</b></label></div>
+<div class="col-md-8">
+<select id="block" name="block" >
+<option>Select</option>
+<option>ANDIMADAM</option>
+<option>ARIYALUR</option>
+<option>JAYAMKONDAM</option>
+<option>SENDURAI</option>
+<option>T.PALUR</option>
+<option>THIRUMANUR</option>
+<option>ANAIMALAI</option>
+<option>ANNUR</option>
+<option>KARAMADAI</option>
+<option>KINATHUKADAVU</option>
+<option>MADUKKARAI</option>
+<option>P.N.PALAYAM</option>
+<option>POLLACHI</option>
+<option>SS.KULAM</option>
+<option>SULUR</option>
+<option>THONDARMUTHUR</option>
+<option>ANNAGRAMAM</option>
+<option>CUDDALORE</option>
+<option>KAMMAPURAM</option>
+<option>KATTUMANNARKOIL</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3"><label>Toatl HH Applied</label></div>
+<div class="col-md-8"><input type="text" id="" name="totap"></div>
+</div>
+<div class="row">
+<div class="col-md-3"><label>Total card issued</label></div>
+<div class="col-md-8"><input type="text" id="" name="totis"></div>
+</div>
+<div class="row">
+<div class="col-md-3"><label>Total cards SC</label></div>
+<div class="col-md-8"><input type="text" id="" name="totsc"></div>
+</div>
+<div class="row">
+<div class="col-md-3"><label>Total cards ST</label></div>
+<div class="col-md-8"><input type="text" id="" name="totst"></div>
+</div>
+
+<div class="row">
+<div class="col-md-3"><label>Total cards Non-SC/ST</label></div>
+<div class="col-md-8"><input type="text" id="" name="totnscst"></div>
+</div>
+<div class="row">
+<div class="col-md-3"><label>Total HH demanded</label></div>
+<div class="col-md-8"><input type="text" id="" name="thhdem"></div>
+</div>
+<div class="row">
+<div class="col-md-3"><label>Total Person Demanded</label></div>
+<div class="col-md-8"><input type="text" id="" name="tpd"></div>
+</div>
+<div class="row">
+<div class="col-md-3"><label>Total HH Alloted work</label></div>
+<div class="col-md-8"><input type="text" id="" name="thha"></div>
+</div>
+<div class="row">
+<div class="col-md-3"><label>Total persons Alloted work</label></div>
+<div class="col-md-8"><input type="text" id="" name="tpa"></div>
+</div>
+
+<div class="row">
+<div class="col-md-3"><button type="submit" class="btn btn-success">UPDATE</div>
+<div class="col-md-3"><button type="reset" class="btn btn-danger">RESET</div>
+</div>
+</form>
+</div>
+<br><br>
+<footer class="footer">
+<center>Smart India Hackothon@2020</center>
+</footer>
+</div>
+</html>

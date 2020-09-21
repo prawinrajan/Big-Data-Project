@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: url('../img/embalam.jpg') no-repeat;
+  background-position: bottom -150px right 100px;
+  z-index: 99;
+  background-size: auto;
+}
+
+.stripe{
+  position: absolute;
+  width: 80vw;
+  height: 90vh;
+  z-index: -1;
+  left: -30rem;
+  top: -5rem;
+  background-color: #2CDA9D;
+  transform: rotate(-20deg);
+}
+
+header{
+  background: white;
+  padding: 1rem 0;
+  width: 100vw;
+}
+
+.options .year-menu .dropdown button,
+.options .year-menu .dropdown .dropdown-menu,
+.options .state-menu .dropdown button,
+.options .state-menu .dropdown .dropdown-menu {
+  width: 200px;
+}
+
+/* 
+  Signup page sign-up-page
+*/
+.message {
+  background-color: #F79D5C;
+  padding: 0.7rem;
+  color: white;
+}
+
+.sign-up-page{
+  /* box-shadow: 1px 1px 5px rgba(0,0,0,0.5); */
+  width: 500px;
+  margin-left: 5rem;
+}
+
+.footer{
+  background-color: white;
+  width: 100vw;
+  height: 100px;
+}

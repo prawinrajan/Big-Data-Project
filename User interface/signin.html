@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, Initial-scale=">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<title>MGNREGA signin</title>
+<style>
+.header{
+padding:40px;
+width:100%;
+position:relative;
+background-image: url('mgnrega_banner.gif');
+background-repeat:no-repeat;
+margin-top:5px;
+}
+.footer{
+padding: 10px;
+width:100%;
+background-color:#9933cc;
+color:white;
+}
+#h3{
+font-family: Arial, Helvetica, sans-serif;
+color:darkblue;
+text-align:center;
+}
+.frmcnt{
+margin-top: 5px;
+margin-left: 100px;
+margin-right: 100px;
+}
+</style>
+</head>
+
+<div class="container" style="border: 2px solid green;background-image:url('mgn-759.jpg');background-repeat:x-repeat;">
+<div class="header">
+</div><br>
+<h3 id="h3"><b>SIGN IN</b></h3>
+<br>
+<div class="frmcnt">
+<form name="egdreg" method="post" action="https://localhost/sih/signin.php">
+
+
+
+<div class="row">
+<div class="col-md-3"><label><b>E-mail</b></label></div>
+<div class="col-md-8">
+<input type="email" name="email" placeholder="Enter registered email">
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3"><label><b>Password</b></label></div>
+<div class="col-md-8">
+<input type="password" name="password" id="" placeholder="enter password">
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3"><button type="submit" class="btn btn-success">Submit</button></div>
+<div class="col-md-3"><button type="reset" class="btn btn-danger">Reset</button></div></div>
+</div>
+</form>
+<br>
+<br>
+</html>

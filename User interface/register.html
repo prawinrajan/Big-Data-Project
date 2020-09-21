@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- Bootstrap css  -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../lib/loading-plugin/waitMe.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <div class="stripe"></div>
+    <main class="container-fluid px-5">
+      <header class="d-flex justify-content-between col-lg-12 mx-auto">
+        <div class="left"> 
+          <img src="goi.png" alt="" />
+        </div>
+        <div class="right">
+          <img src="swach-bharat.png" alt="" />
+          <img src="mgnrega.png" alt="" />
+        </div> 
+      </header>
+
+      <div class="mt-5 sign-up-page">
+        <div class="col-md-12">
+          <div class="card card-body">
+            <h1 class="text-center mb-3">
+              <i class="fas fa-sign-in-alt"></i> Register
+            </h1>
+            <p class="message"></p>
+            <form action="https://localhost/sih/register.php" id="form" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="Enter name"
+				  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">*Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Enter Email"
+				  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">*Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Enter Password"
+				  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="c_password"
+                  name="c_password"
+                  class="form-control"
+                  placeholder="Enter confirm password"
+				  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-outline-info btn-block submit"
+              >
+                Register
+              </button>
+            </form>
+            <p class="lead mt-4 text-secondary">
+              Already user ?
+              <a href="signin.html" class="text-info">Login</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="p-3 bg-white">
+      <p class="text-center">copy right &copy; reserved 2020 - 2021</p>
+    </footer>
+    <!-- Bootstrap Scripts  -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../lib/loading-plugin/waitMe.js"></script>
+    <!-- Local js file -->
+    <script src="../js/request.js"></script>
+
+    <!-- Register script  -->
+    <script>
+      $('#form').submit((e) => {
+        $('.sign-up-page').waitMe({
+          effect: 'bounce',
+          text: '',
+          bg: 'rgba(255,255,255,0.7)',
+          color: '#000',
+          maxSize: '',
+          waitTime: -1,
+          textPos: 'vertical',
+          fontSize: '',
+          source: '',
+          onClose: function () {
+            setTimeout(() => {
+              alert('closed');
+            }, 2000);
+          },
+        });
+
+        e.preventDefault();
+        postData('/register', {
+          name: $('#name').val(),
+          email: $('#email').val(),
+          password: $('#password').val(),
+          c_password: $('#c_password').val(),
+        }).then((data) => {
+          $('.sign-up-page').waitMe('hide');
+          $('.message').text(data.msg);
+          $('.message').css('display', 'unset');
+
+          setInterval(() => {
+            $('.message').css('display', 'none');
+          }, 3500);
+
+          $('#name').html('');
+          $('#email').html('');
+          $('#password').html('');
+          $('#c_password').html('');
+          console.log(data); // JSON data parsed by `data.json()` call
+        });
+      });
+    </script>
+  </body>
+</html>

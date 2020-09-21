@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, Initial-scale=">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<title>PHYSICAL PROGRESS REPORT</title>
+<style>
+.header{
+padding:40px;
+width:100%;
+position:relative;
+background-image: url('mgnrega_banner.gif');
+background-repeat:no-repeat;
+margin-top:5px;
+}
+.footer{
+padding: 10px;
+width:100%;
+background-image: linear-gradient(to right, orange, white , green);
+color:darkblue;
+}
+#h3{
+font-family: Arial, Helvetica, sans-serif;
+color:darkblue;
+text-align:center;
+}
+.frmcnt{
+margin-top: 5px;
+margin-left: 100px;
+margin-right: 100px;
+}
+a:hover{
+background-color:yellow;
+}
+</style>
+</head>
+
+<div class="container-fluid" style="border: 2px solid green;background-image:url('mgn-759.jpg');background-repeat:x-repeat;">
+<div class="header">
+</div><br>
+<h2 id="h3"><b>PHYSICAL PROGRESS - SC/ST Employment Status</b></h2>
+<marquee style="color:red;font-size:18px"><b>Kindly select Which report you want to manage!!<b></marquee>
+<br><br>
+<center>
+<h2 style="color:green"><b>PHYSICAL PROGRESS</b></h2>
+</center>
+
+<div class="row" style="color:blue;font-size:20px">
+<div class="col-md-3">
+</div>
+<div class="col-md-8">
+<ol style="list-style-type:number">
+<li id="prcount"><a href="progrepmain.html" id="pr">Progress Report</a></li>
+<li id="scstcount"><a href="scstempmain.html">SC ST Employment Status</a></li>
+<li id="dispercount"><a href="dismain.html">Employment Provided to Disabled Persons</a></li>
+<li id="percount"><a href="#">Employment Provided Period wise</a></li>
+<li id="noempcount"><a href="#">GP With No Employment</a></li>
+</div>
+</ol>
+</div>
+<button onclick="prcnt()">Click here</button>
+
+<script type="text/javascript">
+
+function prcnt(){
+
+var pr=5;
+var scstemp=2;
+var ep=3;
+var epp=4;
+var gp=5;
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text:"PRIORITIZED REPORT BASED ON VIEWS"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		title: "Number of Views"
+	},
+	data: [{
+		type: "bar",
+		name: "count",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: pr, label: "Progress Report" },
+			{ y: scstemp, label: "SC/ST Employment Status" },
+			{ y: ep, label: "Employment Provided to Disabled Persons" },
+			{ y: epp, label: "Employment Provided Period wise" },
+			{ y: gp, label: "GP With No Employment" },
+		]
+	}]
+});
+chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<br><br>
+<center><input type="submit" style="alighn:left" value="Go To HomePage"><br><br></center>
+<footer class="footer">
+<center><b>Smart India Hackothon@2020</b></center>
+</footer>
+</div>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, Initial-scale=">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<title>PHYSICAL PROGRESS</title>
+<style>
+.header{
+padding:40px;
+width:100%;
+position:relative;
+background-image: url('mgnrega_banner.gif');
+background-repeat:no-repeat;
+margin-top:5px;
+
+}
+.footer{
+padding: 10px;
+width:100%;
+background-image: linear-gradient(to right, orange, white , green);
+color:darkblue;
+}
+#h3{
+font-family: Arial, Helvetica, sans-serif;
+color:darkblue;
+text-align:center;
+}
+.frmcnt{
+margin-top: 5px;
+margin-left: 100px;
+margin-right: 100px;
+}
+</style>
+</head>
+
+<div class="container" style="border: 2px solid green;background-image:url('mgn-759.jpg');background-repeat:x-repeat;">
+<div class="header">
+</div><br>
+<h3 id="h3"><b>PROGRESS REPORT</b></h3>
+<br>
+<marquee style="color:red;font-size:18px"><b>Here you can Insert, Update and Retrieve the Data!!!<b></marquee>
+<br><br><br><br>
+<div class="container"><center>
+<button class="btn btn-primary" onclick="window.location.href = '#'">INSERT</button><br><br>
+<button class="btn btn-success" onclick="window.location.href = 'disret.html'">RETRIVE DATA</button><br><br>
+<button class="btn btn-warning" onclick="window.location.href = '#'">UPDATE</button><br><br>
+<button class="btn btn-danger" onclick="window.location.href = '#'">DELETE DATA</button><br><br>
+</center>
+</div>
+<br><br>
+
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+
+
+<input type="submit" style="alighn:left" value="Go To HomePage"><br><br>
+<p><button onclick="clickCounter()" type="button">See number of visits</button></p>
+<div id="result"></div>
+
+<footer class="footer">
+<center><b>Smart India Hackothon@2020<b></center>
+</footer>
+</div>
+</html>

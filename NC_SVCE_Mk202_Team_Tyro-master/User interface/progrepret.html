@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, Initial-scale=">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<title>Retrive progress</title>
+<style>
+.header{
+padding:40px;
+width:100%;
+position:relative;
+background-image: url('mgnrega_banner.gif');
+background-repeat:no-repeat;
+margin-top:5px;
+}
+.footer{
+padding: 10px;
+width:100%;
+background-color:#9933cc;
+color:white;
+}
+#h3{
+font-family: Arial, Helvetica, sans-serif;
+color:darkblue;
+text-align:center;
+}
+.frmcnt{
+margin-top: 5px;
+margin-left: 100px;
+margin-right: 100px;
+}
+</style>
+</head>
+
+<div class="container" style="border: 2px solid green;background-image:url('mgn-759.jpg');background-repeat:x-repeat;">
+<div class="header">
+</div>
+<center><h3 id="h3"><b>Progress report-Retrive</b></h3></center>
+<br>
+<div class="frmcnt">
+<form name="egdreg" method="post" action="https://localhost/sih/progrepret.php">
+<div class="row">
+<div class="col-md-8"><p style="color:red;font-size:18px;"><b>*Kindly select the District and academic year</b></p></div>
+</div></div><br>
+
+
+<div class="row">
+<div class="col-md-3"><label><b>State</b></label></div>
+<div class="col-md-8">
+
+<select id="state" name="state">
+<option>Select</option>
+<option value="TAMILNADU">TAMILNADU</option>
+<option value="KERALA">KERALA</option>
+<option value="BANGALORE">BANGALORE</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3"><label><b>District</b></label></div>
+<div class="col-md-8">
+<select name="district">
+<option>Select</option>
+<option value="ARIYALUR">ARIYALUR</option>
+<option value="COIMPATORE">COIMBATORE</option>
+<option value="CUDDALORE">CUDDALORE</option>
+<option value="DHARMAPURI">DHARMAPURI</option>
+<option value="DINDIGUL">DINDIGUL</option>
+<option value="ERODE">ERODE</option>
+<option value="KANCHIPURAM">KANCHIPURAM</option>
+<option value="KANNIYAKUMARI">KANNIYAKUMARI</option>
+<option value="KARUR">KARUR</option>
+<option value="KRISHNAKIRI">KRISHNAGIRI</option>
+<option value="MADHURAI">MADURAI</option>
+<option value="NAGAPPATTINAM">NAGAPATTINAM</option>
+<option value="NAMAKKAL">NAMAKKAL</option>
+<option value="PERAMPALUR">PERAMBALUR</option>
+<option value="PUDHUKKOTTAI">PUDUKKOTTAI</option>
+<option value="RAMANATHAPURAM">RAMANATHAPURAM</option>
+<option value="SALEM">SALEM</option>
+<option value="SIVAGANGAI">SIVAGANGAI</option>
+<option value="THANJAVUR">THANJAVUR</option>
+<option value="THE NILGIRISH">THE NILGIRIS</option>
+<option value="THENI">THENI</option>
+<option value="THOOTHUKKUDI">THOOTHUKKUDI</option>
+<option value="TIRUCHIRAPPALLI">TIRUCHIRAPPALLI</option>
+<option value="TIRUNELVELI">TIRUNELVELI</option>
+<option value="TIRUPPUR">TIRUPPUR</option>
+<option value="TIRUVALLUR">TIRUVALLUR</option>
+<option value="TIRUVANNAMALAI">TIRUVANNAMALAI</option>
+<option value="TIRUVARUR">TIRUVARUR</option>
+<option value="VELLORE">VELLORE</option>
+<option value="VILLUPURAM">VILLUPURAM</option>
+<option value="VIRUDHUNAGAR">VIRUDHUNAGAR</option>
+</select>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-3"><label><b>Block</b></label></div>
+<div class="col-md-8">
+<select id="block" name="block" >
+<option>Select</option>
+<option value="ANDIMADAM">ANDIMADAM</option>
+<option value="ARIYALUR">ARIYALUR</option>
+<option value="JAYAMKONDAM">JAYAMKONDAM</option>
+<option value="SENDURAI">SENDURAI</option>
+<option value="T.PALUR">T.PALUR</option>
+<option value="THIRUMANUR">THIRUMANUR</option>
+<option>ANAIMALAI</option>
+<option>ANNUR</option>
+<option>KARAMADAI</option>
+<option>KINATHUKADAVU</option>
+<option>MADUKKARAI</option>
+<option>P.N.PALAYAM</option>
+<option>POLLACHI</option>
+<option>SS.KULAM</option>
+<option>SULUR</option>
+<option>THONDARMUTHUR</option>
+<option>ANNAGRAMAM</option>
+<option>CUDDALORE</option>
+<option>KAMMAPURAM</option>
+<option>KATTUMANNARKOIL</option>
+</select>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-3"><label><b>Academic Year</b></label></div>
+<div class="col-md-8">
+<select required name="year">
+<option value="#">Select</option>
+<option value="nin">2020-2021</option>
+<option value="nin">2019-2020</option>
+<option value="nin">2018-2019</option>
+</select>
+</div>
+</div>
+<center>
+<button type="submit" class="btn btn-danger">SEARCH</button>
+</center>
+</form>
+<button class="btn btn-success" onclick="window.location.href = 'progrepmain.html'">GoBack</button><br><br>
+<br>
+<br>
+</html>
